@@ -1,0 +1,128 @@
+body{
+    text-align: center;
+    /* VH Viewport height (percent of browser) */
+    height: 100vh;
+    justify-content: center;
+
+
+    background-color: slateblue;
+}
+#header{
+    border: 3px dotted paleturquoise;
+    padding: 20px;
+    text-align: center;
+
+    /* name of animation to play */
+    animation-name: colorChange;
+    /* how long to play for */
+    animation-duration: .2s;
+    /* how many times does it loop */
+    animation-iteration-count: infinite;
+    /* Animation goes forwards then backwards */
+    animation-direction: alternate;
+}
+#nav{
+    text-align: center;
+    border-top: 2px solid whitesmoke;
+    border-bottom: 2px solid whitesmoke;
+    /* creates empty space */
+    padding-top: 10px;
+}
+#bio{
+    height:100px;
+    text-align: center;
+    margin: auto;
+
+    /* name of animation */
+    animation-name: percentageExample;
+    /* Duration */
+    animation-duration: 2s;
+    /* how many times */
+    animation-iteration-count: infinite;
+    /* direction */
+    animation-direction: alternate;
+}
+#schooling{
+    font-size: 40px;
+    border: 2px double burlywood;
+
+    animation-name: movingThings;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#hobbies{
+    text-align: center;
+    animation-name: movingThings;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction:inherit;
+}
+#footer{
+    font-size:40px;
+}
+@keyframes colorChange{
+    from{
+        color:black;
+    }
+    to{
+        color:slateblue;
+    }
+}
+/*  */
+@keyframes percentageExample
+{
+    0%{
+        font-size: 0px;
+        color: azure;
+    }
+    50%
+    {
+        font-size: 10px;
+        color: darkmagenta;
+    }
+    65%
+    {
+        font-size: 25px;
+        color:indigo;
+    }
+    68%
+    {
+        font-size: 5px;
+        color: violet;
+    }
+    74%
+    {
+        font-size: 20px;
+        color: cornflowerblue;
+    }
+    100%
+    {
+        font-size: 100px;
+        color: rgb(113, 91, 255);
+    }
+}
+/* example of moving frame */
+@keyframes movingThings{
+    0%{
+        /* move the element */
+        /* first value is left or right, second is up or down */
+        transform: translate(50px, 10px);
+    }
+    20%{
+        /* rotates something */
+        transform:rotate(275deg);
+        transform:translate(-100px, 50px);
+    }
+    30%{
+        transform: rotate(-180deg);
+        transform: scale(2);
+    }
+    50%{
+        transform:scale(1);
+    }
+    100%{
+        transform: translate(50px, 10px);
+        transform: rotate(180deg);
+    }
+}
