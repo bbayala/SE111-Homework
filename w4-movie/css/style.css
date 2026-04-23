@@ -28,7 +28,7 @@ body{
     padding: 10px;
 
     animation-name: navMove;
-    animation-duration: 5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
 }
 #nav a{
@@ -46,7 +46,7 @@ body{
     margin: auto;
 
     animation-name: contentZoom;
-    animation-duration: 8s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
@@ -92,7 +92,16 @@ body{
         transform: scale(1)
     }
     to{
-        transform: scale(1.05)
+        transform: scale(1.10)
     }
 }
-
+h2{
+    color:whitesmoke
+}
+h3{
+    color:rgb(0, 0, 0)
+}
+ul{
+    background-color: rgb(0, 0, 0);
+    color:whitesmoke
+}
