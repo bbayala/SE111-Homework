@@ -1,18 +1,98 @@
 body{
-    background-color: blanchedalmond;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(107, 107, 107);
     text-align: center;
+    margin: 0;
 }
-#container
+#container{
+    border: 5px solid black;
+    width: 800px;
+    height: 1625px;
+    background-color: gray;
+    padding-bottom: 60px;
+}
+#header{
+    height: 130px;
+    border: 3px dotted paleturquoise;
+    text-align: center;
 
-#header
+    animation-name: headerColor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#nav{
+    text-align: center;
+    border: 2px solid rgb(182, 180, 176);
+    padding: 10px;
 
-#nav
+    animation-name: navMove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+#nav a{
+    border: 2px solid black;
+    padding: 5px;
+    color: black
+}
+#nav a:hover{
+    background-color: purple;
+    font-size: 18px;
+}
+#content{
+    width:520px;
+    text-align: center;
+    margin: auto;
 
-#nav:hover
-
-#content
-
-@keyframes
-
-@keyframes
+    animation-name: contentZoom;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.character{
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    background-color: grey;
+}
+.info{
+    border: 2px dotted black;
+    padding: 10px;
+    margin: 10px;
+    background-color: gainsboro;
+}
+#footer{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid black;
+    margin-top: 30px;
+}
+@keyframes headerColor{
+    from{
+        color:black
+    }
+    to{
+        color:white
+    }
+}
+@keyframes navMove{
+    0%{
+        transform: translate(0px);
+    }
+    50%{
+        transform:translate(10px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
+@keyframes contentZoom{
+    from{
+        transform: scale(1)
+    }
+    to{
+        transform: scale(1.05)
+    }
+}
 
