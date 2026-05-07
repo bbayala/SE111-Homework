@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 6 | Java</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        var pay = Number(prompt("Enter hourly pay rate"))
+        var hours = Number(prompt("Enter hours worked"))
+        var taxRate = Number(prompt("Enter tax percent (whole number)"))
+
+        var grossPay = pay * hours * 2
+        var tax = grossPay * (taxRate/100)
+        var netPay = grossPay - tax
+
+        console.log("Gross Pay: $" + grossPay)
+        console.log("Uncle Sam's Share: $" + tax)
+        console.log("User's Net Pay: $" + netPay)
+        
+        alert(
+            "Gross Pay: $" + grossPay + "\n" +
+            "Uncle Sam's Share: $" + tax + "\n" +
+            "User's Net Pay: $" + netPay
+        )
+
+        var output = document.querySelector("#output")
+        console.log(output.innerHTML)
+
+        output.innerHTML = 
+            "<p>Gross Pay: $" + grossPay + "</p>" +
+            "<p>Uncle Sam's Share: $" + tax + "</p>" +
+            "<p>User's Net Pay: $" + netPay + "</p>" 
+       
+    </script>
+</body>
+</html>
